@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{075e4ac6-e697-4f9e-a592-99181357a5e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{c05cff0c-003b-4a50-9c8f-01c332fefecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\game_manager">
+      <UniqueIdentifier>{e1380bca-ca7d-4301-8baf-589b2099f0eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\entity">
+      <UniqueIdentifier>{66006c48-9fb5-4ea6-9c5c-46f6a7f3779d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scene">
+      <UniqueIdentifier>{45651496-c64f-4c23-8e43-5bb8af9aa938}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
