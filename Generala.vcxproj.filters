@@ -21,5 +21,13 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\entity\Entity.cpp">
+      <Filter>src\entity</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\entity\Entity.h">
+      <Filter>src\entity</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
