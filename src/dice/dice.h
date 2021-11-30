@@ -17,6 +17,7 @@ private:
 	Sprite spr_dice;
 	bool launching;
 	bool selected;
+	Vector2f originPosition;
 
 	static void initTextures();
 	void rolling(float deltaTime);
@@ -33,6 +34,8 @@ public:
 
 	void setRandomNumber(int randomNum);
 	void launch();
+
+	Sprite getRenderer();
 };
 
 #endif // !DICE_H

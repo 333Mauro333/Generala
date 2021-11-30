@@ -26,6 +26,8 @@ public:
 	Button(float x, float y, float w, float h, Color color, string display);
 	~Button();
 
+	bool isClicked() override;
+
 	void update(float deltaTime) override;
 	void draw(RenderWindow* window) override;
 };

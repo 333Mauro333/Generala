@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <SFML/System.hpp>
+#include <SFML/Window.hpp>
 
 #include "game_manager/game_manager.h"
 #include "scenes/credits/credits.h"
@@ -65,6 +66,11 @@ Button::Button(float w, float h, float x, float y, Color color, string display) 
 Button::~Button()
 {
 	cout << "El boton ha sido eliminado de la memoria.\n";
+}
+
+bool Button::isClicked()
+{
+	return sf::Mouse::isButtonPressed(sf::Mouse::Left);
 }
 
 void Button::update(float deltaTime)

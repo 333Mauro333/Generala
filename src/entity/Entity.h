@@ -20,7 +20,7 @@ public:
 	virtual void draw(sf::RenderWindow* window) = 0;
 	virtual bool collisionWith(Entity* entity);
 	
-	bool isClicked();
+	virtual bool isClicked();
 
 	Vector2f getPosition();
 	Vector2f getSize();

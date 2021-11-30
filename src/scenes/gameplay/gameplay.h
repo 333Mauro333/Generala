@@ -2,12 +2,13 @@
 #define GAMEPLAY_H
 
 #include "scenes/scene.h"
-
+#include "dice/dice.h"
 
 class Gameplay : Scene
 {
 private:
 	RenderWindow* win;
+	Dice* dices[5];
 
 public:
 	Gameplay(RenderWindow* window);

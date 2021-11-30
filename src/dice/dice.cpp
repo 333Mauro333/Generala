@@ -11,6 +11,8 @@ Texture Dice::tex_dices[6];
 
 Dice::Dice(Vector2f position, Vector2f size) : Entity(position, size)
 {
+	originPosition = position;
+
 	spr_dice.setTexture(tex_dices[0]);
 	spr_dice.setOrigin(spr_dice.getGlobalBounds().width / 2.0f, spr_dice.getGlobalBounds().height / 2.0f);
 	spr_dice.setPosition({ position.x, position.y });
@@ -27,7 +29,10 @@ Dice::~Dice()
 
 void Dice::update(float deltaTime)
 {
-
+	if (launching)
+	{
+		rolling(deltaTime);
+	}
 }
 void Dice::draw(RenderWindow* window)
 {
@@ -40,10 +45,16 @@ void Dice::setRandomNumber(int randomNum)
 }
 void Dice::launch()
 {
-	if (!selected && !launching && amountOfLaunches >= 3)
+	if (!selected && amountOfLaunches >= 3)
 	{
-
+		launching = true;
+		spr_dice.setPosition(originPosition.x + 650, originPosition.y);
 	}
+}
+
+Sprite Dice::getRenderer()
+{
+	return spr_dice;
 }
 
 void Dice::initTextures()
@@ -60,10 +71,22 @@ void Dice::initTextures()
 }
 void Dice::rolling(float deltaTime)
 {
-	spr_dice.rotate(1200 * deltaTime);
+	if (launching)
+	{
+		spr_dice.rotate(1200 * deltaTime);
+		spr_dice.move(spr_dice.getPosition().x - 400.0f * deltaTime, 0.0f);
+
+		if (spr_dice.getPosition().x < originPosition.x)
+		{
+			stop();
+		}
+	}
 }
 void Dice::stop()
 {
-	launching = false;
-	spr_dice.setRotation(0);
+	if (launching)
+	{
+		launching = false;
+		spr_dice.setRotation(0);
+	}
 }
