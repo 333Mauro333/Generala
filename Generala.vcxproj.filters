@@ -13,30 +13,51 @@
     <Filter Include="src\entity">
       <UniqueIdentifier>{66006c48-9fb5-4ea6-9c5c-46f6a7f3779d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\scene">
-      <UniqueIdentifier>{45651496-c64f-4c23-8e43-5bb8af9aa938}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\button">
       <UniqueIdentifier>{a8c1c00d-691d-4913-805a-c3acececfbf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes">
+      <UniqueIdentifier>{45651496-c64f-4c23-8e43-5bb8af9aa938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes\credits">
+      <UniqueIdentifier>{d8779421-00b6-427b-94d8-229563ed0519}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes\gameplay">
+      <UniqueIdentifier>{397a1353-f28a-4a20-826e-a60c544df287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes\main_menu">
+      <UniqueIdentifier>{6901d3ec-ba0a-4f0c-b134-b5af12fece48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes\menu_game_mode">
+      <UniqueIdentifier>{36e0915a-ee5f-4f1e-bca0-bba05d6ac6c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes\options">
+      <UniqueIdentifier>{b1dd8f11-eac7-49f3-a1d6-db97be97a5d7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\entity\Entity.cpp">
+    <ClCompile Include="src\entity\entity.cpp">
       <Filter>src\entity</Filter>
     </ClCompile>
-    <ClCompile Include="src\game_manager\GameManager.cpp">
+    <ClCompile Include="src\game_manager\game_manager.cpp">
       <Filter>src\game_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scenes\main_menu\main_menu.cpp">
+      <Filter>src\scenes\main_menu</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\entity\Entity.h">
+    <ClInclude Include="src\entity\entity.h">
       <Filter>src\entity</Filter>
     </ClInclude>
-    <ClInclude Include="src\game_manager\GameManager.h">
+    <ClInclude Include="src\game_manager\game_manager.h">
       <Filter>src\game_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scenes\main_menu\main_menu.h">
+      <Filter>src\scenes\main_menu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

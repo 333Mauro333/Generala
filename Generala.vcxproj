@@ -146,13 +146,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\entity\Entity.cpp" />
-    <ClCompile Include="src\game_manager\GameManager.cpp" />
+    <ClCompile Include="src\entity\entity.cpp" />
+    <ClCompile Include="src\game_manager\game_manager.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\scenes\main_menu\main_menu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\entity\Entity.h" />
-    <ClInclude Include="src\game_manager\GameManager.h" />
+    <ClInclude Include="src\entity\entity.h" />
+    <ClInclude Include="src\game_manager\game_manager.h" />
+    <ClInclude Include="src\scenes\main_menu\main_menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
