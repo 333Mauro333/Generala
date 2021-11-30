@@ -8,6 +8,10 @@ using std::cout;
 MainMenu::MainMenu(RenderWindow* win) : Scene()
 {
 	this->win = win;
+
+	back.setSize({ static_cast<float>(win->getSize().x), static_cast<float>(win->getSize().y) });
+	back.setFillColor(Color::Color(141, 73, 37));
+
 	button[0] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 2.3f - hButtons / 2.0f, Color::Yellow, "JUGAR");
 	button[1] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 3.1f- hButtons / 2.0f, Color::Yellow, "OPCIONES");
 	button[2] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 3.9f - hButtons / 2.0f, Color::Yellow, "AYUDA");
@@ -39,6 +43,7 @@ void MainMenu::update(float deltaTime)
 }
 void MainMenu::draw()
 {
+	win->draw(back);
 
 	for (int i = 0; i < 5; i++)
 	{

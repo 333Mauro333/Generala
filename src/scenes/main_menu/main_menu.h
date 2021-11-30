@@ -14,6 +14,7 @@ private:
 	Button* button[5];
 	RenderWindow* win;
 
+	RectangleShape back;
 	Font font;
 	Text gameTitle;
 
