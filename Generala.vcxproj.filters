@@ -54,8 +54,11 @@
     <ClCompile Include="src\scenes\menu_game_mode\menu_game_mode.cpp">
       <Filter>src\scenes\menu_game_mode</Filter>
     </ClCompile>
-    <ClCompile Include="src\scenes\credits\Source.cpp">
+    <ClCompile Include="src\scenes\credits\credits.cpp">
       <Filter>src\scenes\credits</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scenes\options\options.cpp">
+      <Filter>src\scenes\options</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="src\scenes\credits\credits.h">
       <Filter>src\scenes\credits</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scenes\options\options.h">
+      <Filter>src\scenes\options</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
