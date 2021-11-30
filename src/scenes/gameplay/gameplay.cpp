@@ -5,8 +5,10 @@
 using std::cout;
 
 
-Gameplay::Gameplay() : Scene()
+Gameplay::Gameplay(RenderWindow* win) : Scene()
 {
+	this->win = win;
+
 	cout << "Se ha creado una pantalla de gameplay.\n";
 }
 Gameplay::~Gameplay()

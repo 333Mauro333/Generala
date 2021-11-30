@@ -7,10 +7,10 @@
 class Options : Scene
 {
 private:
-
+	RenderWindow* win;
 
 public:
-	Options();
+	Options(RenderWindow* window);
 	~Options();
 
 	void init() override;

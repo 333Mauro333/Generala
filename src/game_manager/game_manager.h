@@ -4,6 +4,8 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 
+using sf::RenderWindow;
+
 
 class GameManager
 {
@@ -15,8 +17,7 @@ private:
 	void destroy();
 
 public:
-	int num = 0;
-	sf::RenderWindow* window = new sf::RenderWindow(sf::VideoMode(800, 600), "Soy el título");
+	RenderWindow* window = new RenderWindow(sf::VideoMode(600, 800), "Generala");
 
 	GameManager(unsigned int width, unsigned int height, const std::string windowTitle);
 	~GameManager();

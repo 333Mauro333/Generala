@@ -5,8 +5,10 @@
 using std::cout;
 
 
-Options::Options() : Scene()
+Options::Options(RenderWindow* win) : Scene()
 {
+	this->win = win;
+
 	cout << "Se ha creado una pantalla de opciones.\n";
 }
 Options::~Options()

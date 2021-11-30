@@ -5,14 +5,23 @@
 
 #include "button/button.h"
 
+using sf::Text;
+using sf::Font;
+
 class MainMenu : public Scene
 {
 private:
-	Button* button;
-	sf::RenderWindow* win;
+	Button* button[5];
+	RenderWindow* win;
+
+	Font font;
+	Text gameTitle;
+
+	const float wButtons = 200;
+	const float hButtons = 100;
 
 public:
-	MainMenu(sf::RenderWindow* win);
+	MainMenu(RenderWindow* win);
 	~MainMenu();
 
 	void init() override;

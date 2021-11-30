@@ -7,9 +7,10 @@
 class Gameplay : Scene
 {
 private:
+	RenderWindow* win;
 
 public:
-	Gameplay();
+	Gameplay(RenderWindow* window);
 	~Gameplay();
 
 	void init() override;

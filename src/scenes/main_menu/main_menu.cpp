@@ -8,7 +8,19 @@ using std::cout;
 MainMenu::MainMenu(RenderWindow* win) : Scene()
 {
 	this->win = win;
-	button = new Button(10, 10, 300, 200, Color::Green);
+	button[0] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 2.3f - hButtons / 2.0f, Color::Yellow, "JUGAR");
+	button[1] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 3.1f- hButtons / 2.0f, Color::Yellow, "OPCIONES");
+	button[2] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 3.9f - hButtons / 2.0f, Color::Yellow, "AYUDA");
+	button[3] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 4.7f - hButtons / 2.0f, Color::Yellow, "CREDITOS");
+	button[4] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 5.5f - hButtons / 2.0f, Color::Yellow, "SALIR");
+
+	font.loadFromFile("res/fonts/over_the_rainbow.ttf");
+	gameTitle.setFont(font);
+	gameTitle.setCharacterSize(40);
+	gameTitle.setFillColor(Color::White);
+	gameTitle.setString("GENERALA");
+	gameTitle.setOrigin(gameTitle.getGlobalBounds().width / 2.0f, gameTitle.getGlobalBounds().height / 2.0f);
+	gameTitle.setPosition(win->getSize().x / 2.0f, win->getSize().y / 7.0f);
 
 	cout << "Se ha creado una pantalla de menu principal.\n";
 }
@@ -27,7 +39,12 @@ void MainMenu::update(float deltaTime)
 }
 void MainMenu::draw()
 {
-	button->draw(win);
+
+	for (int i = 0; i < 5; i++)
+	{
+		button[i]->draw(win);
+	}
+	win->draw(gameTitle);
 }
 void MainMenu::destroy()
 {

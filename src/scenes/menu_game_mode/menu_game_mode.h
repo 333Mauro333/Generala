@@ -7,9 +7,10 @@
 class MenuGameMode : Scene
 {
 private:
+	RenderWindow* win;
 
 public:
-	MenuGameMode();
+	MenuGameMode(RenderWindow* window);
 	~MenuGameMode();
 
 	void init() override;

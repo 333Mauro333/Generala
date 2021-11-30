@@ -7,10 +7,10 @@
 class Credits : Scene
 {
 private:
-
+	RenderWindow* win;
 
 public:
-	Credits();
+	Credits(RenderWindow* window);
 	~Credits();
 
 	void init() override;

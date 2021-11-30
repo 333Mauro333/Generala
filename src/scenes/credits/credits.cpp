@@ -5,8 +5,10 @@
 using std::cout;
 
 
-Credits::Credits() : Scene()
+Credits::Credits(RenderWindow* win) : Scene()
 {
+	this->win = win;
+
 	cout << "Se ha creado una pantalla de creditos.\n";
 }
 Credits::~Credits()
