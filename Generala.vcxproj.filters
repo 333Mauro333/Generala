@@ -16,6 +16,9 @@
     <Filter Include="src\scene">
       <UniqueIdentifier>{45651496-c64f-4c23-8e43-5bb8af9aa938}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\button">
+      <UniqueIdentifier>{a8c1c00d-691d-4913-805a-c3acececfbf6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -23,6 +26,9 @@
     </ClCompile>
     <ClCompile Include="src\entity\Entity.cpp">
       <Filter>src\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game_manager\GameManager.cpp">
+      <Filter>src\game_manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
