@@ -34,6 +34,9 @@
     <Filter Include="src\scenes\options">
       <UniqueIdentifier>{b1dd8f11-eac7-49f3-a1d6-db97be97a5d7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\scene_manager">
+      <UniqueIdentifier>{9b872baa-c652-4ed2-9343-3235225fd24d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -63,6 +66,9 @@
     <ClCompile Include="src\scenes\gameplay\gameplay.cpp">
       <Filter>src\scenes\gameplay</Filter>
     </ClCompile>
+    <ClCompile Include="src\scene_manager\scene_manager.cpp">
+      <Filter>src\scene_manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\entity\entity.h">
@@ -88,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="src\scenes\gameplay\gameplay.h">
       <Filter>src\scenes\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene_manager\SceneManager.h">
+      <Filter>src\scene_manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

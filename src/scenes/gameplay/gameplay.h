@@ -16,7 +16,6 @@ public:
 	void update(float deltaTime) override;
 	void draw(RenderWindow window) override;
 	void destroy() override;
-
 };
 
 #endif // !GAMEPLAY_H

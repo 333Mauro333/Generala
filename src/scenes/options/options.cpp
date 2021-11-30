@@ -5,7 +5,7 @@
 using std::cout;
 
 
-Options::Options()
+Options::Options() : Scene()
 {
 	cout << "Se ha creado una pantalla de opciones.\n";
 }

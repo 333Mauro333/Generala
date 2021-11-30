@@ -155,6 +155,7 @@
     <ClCompile Include="src\scenes\menu_game_mode\menu_game_mode.cpp" />
     <ClCompile Include="src\scenes\options\options.cpp" />
     <ClCompile Include="src\scenes\scene.cpp" />
+    <ClCompile Include="src\scene_manager\scene_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\entity\entity.h" />
@@ -165,6 +166,7 @@
     <ClInclude Include="src\scenes\menu_game_mode\menu_game_mode.h" />
     <ClInclude Include="src\scenes\options\options.h" />
     <ClInclude Include="src\scenes\scene.h" />
+    <ClInclude Include="src\scene_manager\SceneManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

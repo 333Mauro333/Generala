@@ -5,7 +5,7 @@
 using std::cout;
 
 
-MainMenu::MainMenu()
+MainMenu::MainMenu() : Scene()
 {
 	cout << "Se ha creado una pantalla de menu principal.\n";
 }

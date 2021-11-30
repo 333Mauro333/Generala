@@ -5,7 +5,7 @@
 using std::cout;
 
 
-MenuGameMode::MenuGameMode()
+MenuGameMode::MenuGameMode() : Scene()
 {
 	cout << "Se ha creado una pantalla de modo de juego.\n";
 }

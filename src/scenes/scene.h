@@ -10,7 +10,7 @@ private:
 
 public:
 	Scene();
-	~Scene();
+	virtual ~Scene();
 
 	virtual void init() = 0;
 	virtual void update(float deltaTime) = 0;

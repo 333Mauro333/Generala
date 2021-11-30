@@ -5,7 +5,7 @@
 using std::cout;
 
 
-Credits::Credits()
+Credits::Credits() : Scene()
 {
 	cout << "Se ha creado una pantalla de creditos.\n";
 }

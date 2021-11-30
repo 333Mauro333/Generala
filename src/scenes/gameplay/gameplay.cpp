@@ -5,7 +5,7 @@
 using std::cout;
 
 
-Gameplay::Gameplay()
+Gameplay::Gameplay() : Scene()
 {
 	cout << "Se ha creado una pantalla de gameplay.\n";
 }

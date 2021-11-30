@@ -18,10 +18,10 @@ public:
 	virtual void draw();
 	virtual void collisionWith(Entity* entity);
 
+	Vector2f getPosition();
+
 private:
 	Vector2f position;
-
-
 };
 
 
