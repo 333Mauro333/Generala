@@ -158,6 +158,7 @@
     <ClCompile Include="src\scene_manager\scene_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\button\button.h" />
     <ClInclude Include="src\entity\entity.h" />
     <ClInclude Include="src\game_manager\game_manager.h" />
     <ClInclude Include="src\scenes\credits\credits.h" />

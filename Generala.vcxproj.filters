@@ -98,5 +98,8 @@
     <ClInclude Include="src\scene_manager\scene_manager.h">
       <Filter>src\scene_manager</Filter>
     </ClInclude>
+    <ClInclude Include="src\button\button.h">
+      <Filter>src\button</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

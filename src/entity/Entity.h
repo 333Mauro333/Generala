@@ -11,17 +11,21 @@ struct Vector2f
 class Entity
 {
 public:
-	Entity(Vector2f position);
+	Entity(Vector2f position, Vector2f size);
 	virtual ~Entity();
 
 	virtual void update() = 0;
-	virtual void draw();
-	virtual void collisionWith(Entity* entity);
+	virtual void draw() = 0;
+	virtual bool collisionWith(Entity* entity);
+	
+	bool isClicked();
 
 	Vector2f getPosition();
+	Vector2f getSize();
 
 private:
 	Vector2f position;
+	Vector2f size;
 };
 
 
