@@ -37,6 +37,9 @@
     <Filter Include="src\scene_manager">
       <UniqueIdentifier>{9b872baa-c652-4ed2-9343-3235225fd24d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\fade">
+      <UniqueIdentifier>{eb067f86-b219-43d6-ac60-4bfe8864e594}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -72,6 +75,9 @@
     <ClCompile Include="src\button\button.cpp">
       <Filter>src\button</Filter>
     </ClCompile>
+    <ClCompile Include="src\fade\fade.cpp">
+      <Filter>src\fade</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\entity\entity.h">
@@ -103,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="src\button\button.h">
       <Filter>src\button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fade\fade.h">
+      <Filter>src\fade</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
