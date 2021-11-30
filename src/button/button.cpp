@@ -3,8 +3,10 @@
 #include <iostream>
 
 #include "game_manager/game_manager.h"
+#include "scenes/credits/credits.h"
 
 using std::cout;
+using sf::RenderWindow;
 
 
 Button::Button(float x, float y, float w, float h, Color color) : Entity({x, y}, {w, h})
@@ -25,7 +27,7 @@ void Button::update(float deltaTime)
 {
 
 }
-void Button::draw()
+void Button::draw(RenderWindow* window)
 {
-	GameManager::window.draw(rectangle);
+	window->draw(rectangle);
 }

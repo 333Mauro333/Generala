@@ -7,6 +7,7 @@
 
 using sf::Color;
 using sf::RectangleShape;
+using sf::RenderWindow;
 
 class Button : public Entity
 {
@@ -19,7 +20,7 @@ public:
 	~Button();
 
 	void update(float deltaTime) override;
-	void draw() override;
+	void draw(RenderWindow* window) override;
 };
 
 #endif // !BUTTON_H

@@ -1,6 +1,8 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
+#include "SFML/Graphics.hpp"
+
 
 struct Vector2f
 {
@@ -15,7 +17,7 @@ public:
 	virtual ~Entity();
 
 	virtual void update(float deltaTime) = 0;
-	virtual void draw() = 0;
+	virtual void draw(sf::RenderWindow* window) = 0;
 	virtual bool collisionWith(Entity* entity);
 	
 	bool isClicked();

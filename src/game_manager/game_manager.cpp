@@ -10,8 +10,6 @@ using std::cout;
 
 GameManager::GameManager(unsigned int width, unsigned int height, const std::string windowTitle)
 {
-	window.create(sf::VideoMode(width, height), windowTitle);
-
 	cout << "Se ha creado un GameManager.\n";
 }
 GameManager::~GameManager()
@@ -23,7 +21,7 @@ void GameManager::run()
 {
     init();
 
-    while (window.isOpen())
+    while (window->isOpen())
     {
         sf::Clock clock;
         float elapsedTime = clock.getElapsedTime().asSeconds();
@@ -33,11 +31,12 @@ void GameManager::run()
         draw();
     }
     
+    destroy();
 }
 
 void GameManager::init()
 {
-    SceneManager::chargeNewScene(new MainMenu());
+    SceneManager::chargeNewScene(new MainMenu(window));
 }
 void GameManager::update(float deltaTime)
 {
@@ -47,22 +46,22 @@ void GameManager::update(float deltaTime)
 }
 void GameManager::draw()
 {
-    window.clear();
+    window->clear();
 
     SceneManager::getActualScene()->draw();
 
-    window.display();
+    window->display();
 }
 void GameManager::destroy()
 {
-    // Se 
+    SceneManager::getActualScene()->destroy();
 }
 void GameManager::checkEvents()
 {
     sf::Event event;
-    while (window.pollEvent(event))
+    while (window->pollEvent(event))
     {
         if (event.type == sf::Event::Closed)
-            window.close();
+            window->close();
     }
 }

@@ -3,14 +3,16 @@
 
 #include "scenes/scene.h"
 
+#include "button/button.h"
 
 class MainMenu : public Scene
 {
 private:
-
+	Button* button;
+	sf::RenderWindow* win;
 
 public:
-	MainMenu();
+	MainMenu(sf::RenderWindow* win);
 	~MainMenu();
 
 	void init() override;

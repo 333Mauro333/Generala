@@ -4,8 +4,6 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 
-using sf::RenderWindow;
-
 
 class GameManager
 {
@@ -17,12 +15,13 @@ private:
 	void destroy();
 
 public:
+	int num = 0;
+	sf::RenderWindow* window = new sf::RenderWindow(sf::VideoMode(800, 600), "Soy el título");
+
 	GameManager(unsigned int width, unsigned int height, const std::string windowTitle);
 	~GameManager();
 
 	void run();
-
-	static RenderWindow window;
 };
 
 
