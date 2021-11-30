@@ -29,5 +29,8 @@
     <ClInclude Include="src\entity\Entity.h">
       <Filter>src\entity</Filter>
     </ClInclude>
+    <ClInclude Include="src\game_manager\GameManager.h">
+      <Filter>src\game_manager</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
