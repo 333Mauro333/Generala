@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\button\button.cpp" />
+    <ClCompile Include="src\dice\dice.cpp" />
     <ClCompile Include="src\entity\entity.cpp" />
     <ClCompile Include="src\fade\fade.cpp" />
     <ClCompile Include="src\game_manager\game_manager.cpp" />
@@ -161,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\button\button.h" />
+    <ClInclude Include="src\dice\dice.h" />
     <ClInclude Include="src\entity\entity.h" />
     <ClInclude Include="src\fade\fade.h" />
     <ClInclude Include="src\game_manager\game_manager.h" />

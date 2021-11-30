@@ -40,6 +40,9 @@
     <Filter Include="src\fade">
       <UniqueIdentifier>{eb067f86-b219-43d6-ac60-4bfe8864e594}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\dice">
+      <UniqueIdentifier>{36b00094-8b55-4810-a9fe-379c4eb5156d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -78,6 +81,9 @@
     <ClCompile Include="src\fade\fade.cpp">
       <Filter>src\fade</Filter>
     </ClCompile>
+    <ClCompile Include="src\dice\dice.cpp">
+      <Filter>src\dice</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\entity\entity.h">
@@ -112,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="src\fade\fade.h">
       <Filter>src\fade</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dice\dice.h">
+      <Filter>src\dice</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
