@@ -149,6 +149,7 @@
     <ClCompile Include="src\entity\entity.cpp" />
     <ClCompile Include="src\game_manager\game_manager.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\scenes\credits\Source.cpp" />
     <ClCompile Include="src\scenes\main_menu\main_menu.cpp" />
     <ClCompile Include="src\scenes\menu_game_mode\menu_game_mode.cpp" />
     <ClCompile Include="src\scenes\scene.cpp" />
@@ -156,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="src\entity\entity.h" />
     <ClInclude Include="src\game_manager\game_manager.h" />
+    <ClInclude Include="src\scenes\credits\credits.h" />
     <ClInclude Include="src\scenes\main_menu\main_menu.h" />
     <ClInclude Include="src\scenes\menu_game_mode\menu_game_mode.h" />
     <ClInclude Include="src\scenes\scene.h" />

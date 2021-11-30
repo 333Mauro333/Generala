@@ -54,6 +54,9 @@
     <ClCompile Include="src\scenes\menu_game_mode\menu_game_mode.cpp">
       <Filter>src\scenes\menu_game_mode</Filter>
     </ClCompile>
+    <ClCompile Include="src\scenes\credits\Source.cpp">
+      <Filter>src\scenes\credits</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\entity\entity.h">
@@ -70,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="src\scenes\menu_game_mode\menu_game_mode.h">
       <Filter>src\scenes\menu_game_mode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scenes\credits\credits.h">
+      <Filter>src\scenes\credits</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
