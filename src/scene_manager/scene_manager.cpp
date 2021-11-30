@@ -1,20 +1,11 @@
-#include "SceneManager.h"
+#include "scene_manager.h"
 
 #include <iostream>
 
 using std::cout;
 
 
-SceneManager::SceneManager(Scene* scene)
-{
-	this->scene = scene;
-
-	cout << "Se ha creado un SceneManager.\n";
-}
-SceneManager::~SceneManager()
-{
-	cout << "El SceneManager ha sido eliminado de la memoria.\n";
-}
+Scene* SceneManager::scene = NULL;
 
 Scene* SceneManager::getActualScene()
 {
@@ -22,7 +13,10 @@ Scene* SceneManager::getActualScene()
 }
 void SceneManager::chargeNewScene(Scene* newScene)
 {
-	scene->destroy();
+	if (scene != NULL)
+	{
+		scene->destroy();
+	}
 
 	scene = newScene;
 

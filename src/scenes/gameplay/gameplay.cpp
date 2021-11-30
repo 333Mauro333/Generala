@@ -22,7 +22,7 @@ void Gameplay::update(float deltaTime)
 {
 
 }
-void Gameplay::draw(RenderWindow window)
+void Gameplay::draw()
 {
 
 }

@@ -22,7 +22,7 @@ void Credits::update(float deltaTime)
 {
 
 }
-void Credits::draw(RenderWindow window)
+void Credits::draw()
 {
 
 }

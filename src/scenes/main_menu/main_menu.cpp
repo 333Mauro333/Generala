@@ -22,7 +22,7 @@ void MainMenu::update(float deltaTime)
 {
 
 }
-void MainMenu::draw(RenderWindow window)
+void MainMenu::draw()
 {
 
 }

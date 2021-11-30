@@ -166,7 +166,7 @@
     <ClInclude Include="src\scenes\menu_game_mode\menu_game_mode.h" />
     <ClInclude Include="src\scenes\options\options.h" />
     <ClInclude Include="src\scenes\scene.h" />
-    <ClInclude Include="src\scene_manager\SceneManager.h" />
+    <ClInclude Include="src\scene_manager\scene_manager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

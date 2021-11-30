@@ -22,7 +22,7 @@ void MenuGameMode::update(float deltaTime)
 {
 
 }
-void MenuGameMode::draw(RenderWindow window)
+void MenuGameMode::draw()
 {
 
 }

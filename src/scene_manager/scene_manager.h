@@ -7,9 +7,6 @@
 class SceneManager
 {
 public:
-	SceneManager(Scene* scene);
-	~SceneManager();
-
 	static Scene* getActualScene();
 	static void chargeNewScene(Scene* newScene);
 

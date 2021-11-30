@@ -95,7 +95,7 @@
     <ClInclude Include="src\scenes\gameplay\gameplay.h">
       <Filter>src\scenes\gameplay</Filter>
     </ClInclude>
-    <ClInclude Include="src\scene_manager\SceneManager.h">
+    <ClInclude Include="src\scene_manager\scene_manager.h">
       <Filter>src\scene_manager</Filter>
     </ClInclude>
   </ItemGroup>

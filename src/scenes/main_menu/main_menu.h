@@ -4,7 +4,7 @@
 #include "scenes/scene.h"
 
 
-class MainMenu : Scene
+class MainMenu : public Scene
 {
 private:
 
@@ -15,7 +15,7 @@ public:
 
 	void init() override;
 	void update(float deltaTime) override;
-	void draw(RenderWindow window) override;
+	void draw() override;
 	void destroy() override;
 };
 

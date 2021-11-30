@@ -10,18 +10,19 @@ using sf::RenderWindow;
 class GameManager
 {
 private:
-	RenderWindow window;
-
 	void checkEvents();
+	void init();
+	void update(float deltaTime);
+	void draw();
+	void destroy();
 
 public:
 	GameManager(unsigned int width, unsigned int height, const std::string windowTitle);
 	~GameManager();
 
-	void init();
-	void update(float deltaTime);
-	void draw();
-	void destroy();
+	void run();
+
+	static RenderWindow window;
 };
 
 

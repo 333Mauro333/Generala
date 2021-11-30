@@ -15,7 +15,7 @@ public:
 
 	void init() override;
 	void update(float deltaTime) override;
-	void draw(RenderWindow window) override;
+	void draw() override;
 	void destroy() override;
 };
 

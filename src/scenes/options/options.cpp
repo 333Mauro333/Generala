@@ -22,7 +22,7 @@ void Options::update(float deltaTime)
 {
 
 }
-void Options::draw(RenderWindow window)
+void Options::draw()
 {
 
 }
