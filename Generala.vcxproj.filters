@@ -48,6 +48,9 @@
     <ClCompile Include="src\scenes\main_menu\main_menu.cpp">
       <Filter>src\scenes\main_menu</Filter>
     </ClCompile>
+    <ClCompile Include="src\scenes\scene.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\entity\entity.h">
@@ -58,6 +61,9 @@
     </ClInclude>
     <ClInclude Include="src\scenes\main_menu\main_menu.h">
       <Filter>src\scenes\main_menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scenes\scene.h">
+      <Filter>src\scenes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
