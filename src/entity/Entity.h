@@ -14,7 +14,7 @@ public:
 	Entity(Vector2f position, Vector2f size);
 	virtual ~Entity();
 
-	virtual void update() = 0;
+	virtual void update(float deltaTime) = 0;
 	virtual void draw() = 0;
 	virtual bool collisionWith(Entity* entity);
 	

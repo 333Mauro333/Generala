@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\button\button.cpp" />
     <ClCompile Include="src\entity\entity.cpp" />
     <ClCompile Include="src\game_manager\game_manager.cpp" />
     <ClCompile Include="src\main.cpp" />

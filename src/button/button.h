@@ -3,25 +3,23 @@
 
 #include "entity/entity.h"
 
+#include "SFML/Graphics.hpp"
 
-class Button : Entity
+using sf::Color;
+using sf::RectangleShape;
+
+class Button : public Entity
 {
 private:
-
+	RectangleShape rectangle;
+	Color color;
 
 public:
-	Button(int width, int height);
+	Button(float x, float y, float w, float h, Color color);
 	~Button();
 
+	void update(float deltaTime) override;
+	void draw() override;
 };
-
-Button::Button()
-{
-}
-
-Button::~Button()
-{
-}
-
 
 #endif // !BUTTON_H
