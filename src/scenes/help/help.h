@@ -20,6 +20,7 @@ private:
 
 	Font font;
 	Text text;
+	Text instructions;
 
 public:
 	Help(RenderWindow* window);
