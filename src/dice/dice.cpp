@@ -58,10 +58,10 @@ void Dice::launch()
 
 bool Dice::isClicked(int x, int y)
 {
-	return x >= spr_dice.getOrigin().x - spr_dice.getGlobalBounds().width / 2.0f &&
-	   	   x <= spr_dice.getOrigin().x + spr_dice.getGlobalBounds().width / 2.0f &&
-	   	   y >= spr_dice.getOrigin().y - spr_dice.getGlobalBounds().height / 2.0f &&
-	   	   y <= spr_dice.getOrigin().y + spr_dice.getGlobalBounds().height / 2.0f;
+	return x >= spr_dice.getPosition().x - spr_dice.getGlobalBounds().width / 2.0f &&
+	   	   x <= spr_dice.getPosition().x + spr_dice.getGlobalBounds().width / 2.0f &&
+	   	   y >= spr_dice.getPosition().y - spr_dice.getGlobalBounds().height / 2.0f &&
+	   	   y <= spr_dice.getPosition().y + spr_dice.getGlobalBounds().height / 2.0f;
 }
 
 Sprite Dice::getRenderer()

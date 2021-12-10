@@ -18,6 +18,7 @@ public:
 	virtual void update(float deltaTime) = 0;
 	virtual void draw() = 0;
 	virtual void destroy() = 0;
+	virtual void checkClicks(int x, int y) = 0;
 
 	virtual SCENE_TYPE getSceneType() = 0;
 };

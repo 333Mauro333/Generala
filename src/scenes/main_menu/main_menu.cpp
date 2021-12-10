@@ -63,7 +63,7 @@ void MainMenu::checkClicks(int x, int y)
 {
 	if (button[0]->isClicked(x, y))
 	{
-		SceneManager::chargeNewScene(new Gameplay());
+		SceneManager::chargeNewScene(new Gameplay(window));
 	}
 }
 

@@ -71,7 +71,7 @@ void GameManager::checkEvents()
 
         if (event.type == sf::Event::MouseButtonPressed)
         {
-
+            SceneManager::getActualScene()->checkClicks(event.mouseButton.x, event.mouseButton.y);
 
             std::cout << "new mouse x: " << event.mouseButton.x << std::endl;
             std::cout << "new mouse y: " << event.mouseButton.y << std::endl;

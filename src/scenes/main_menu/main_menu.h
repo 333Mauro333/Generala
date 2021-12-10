@@ -32,8 +32,7 @@ public:
 	void update(float deltaTime) override;
 	void draw() override;
 	void destroy() override;
-
-	void checkClicks(int x, int y);
+	void checkClicks(int x, int y) override;
 
 	SCENE_TYPE getSceneType() override;
 };

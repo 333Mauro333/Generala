@@ -22,7 +22,7 @@ public:
 	virtual void draw(RenderWindow* window) = 0;
 	virtual bool collisionWith(Entity* entity);
 	
-	virtual bool isClicked(int x, int y);
+	virtual bool isClicked(int x, int y) = 0;
 
 	void setSize(float x, float y);
 
