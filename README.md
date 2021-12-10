@@ -7,8 +7,8 @@ Este es el clásico juego de mesa en el cual podemos realizar diferentes combina
 
 ## REGLAS DEL JUEGO
 
-Para jugar, se dispone de un máximo de 3 tiros. En cada tiro, podemos separar los dados que creamos convenientes para lo que deseemos hacer.
-Una vez hechos los 3 tiros, debemos completar alguna categoría, las cuales son las siguientes:
+Para jugar, se dispone de un máximo de 3 tiros. En cada tiro, podemos separar los dados que creamos convenientes para lo que deseemos hacer. También podemos plantarnos y anotar nuestro puntaje sin necesidad de tirar los dados 3 veces.
+Las categorías a completar son las siguientes:
 
 ### NÚMEROS
 Los números suman tantos puntos como cantidad que se consigan. Por ejemplo, si al terminar se tienen tres dados con el 5, serían 15 puntos para el 5. Si se tienen dos dados con el número 4, son 8 puntos para el 4.
@@ -25,4 +25,4 @@ Tras obtener 4 números iguales, podemos completar esta categoría, obteniendo a
 ### GENERALA:
 Son 5 números iguales. Tras lograrla, se ganan 60 puntos.
 
-Vale aclarar que si no se quiere (o puede) asignar puntos a ninguna categoría, el jugador puede decidir tachar alguna. Lo más frecuente es tacharse la doble generala, ya que es la más difícil de completar.
+Vale aclarar que si no se quiere (o puede) asignar puntos a ninguna categoría, el jugador puede decidir "tachar" alguna. Lo más frecuente es tacharse la doble generala, ya que es la más difícil de completar.
