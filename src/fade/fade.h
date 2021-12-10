@@ -14,8 +14,6 @@ private:
 	static bool fadeIn;
 
 public:
-	static void fadeIn();
-	static void fadeOut();
 };
 
 #endif // !FADE_H

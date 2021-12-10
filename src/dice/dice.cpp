@@ -2,15 +2,19 @@
 
 #include <iostream>
 
+#include "game_manager/game_manager.h"
+
 using std::cout;
 using std::string;
+using sf::Mouse;
 
 
 int Dice::amountOfLaunches = 0;
-Texture Dice::tex_dices[6];
 
-Dice::Dice(Vector2f position, Vector2f size) : Entity(position, size)
+Dice::Dice(Vector2f position) : Entity(position)
 {
+	initTextures();
+
 	originPosition = position;
 
 	spr_dice.setTexture(tex_dices[0]);
@@ -50,6 +54,14 @@ void Dice::launch()
 		launching = true;
 		spr_dice.setPosition(originPosition.x + 650, originPosition.y);
 	}
+}
+
+bool Dice::isClicked(int x, int y)
+{
+	return x >= spr_dice.getOrigin().x - spr_dice.getGlobalBounds().width / 2.0f &&
+	   	   x <= spr_dice.getOrigin().x + spr_dice.getGlobalBounds().width / 2.0f &&
+	   	   y >= spr_dice.getOrigin().y - spr_dice.getGlobalBounds().height / 2.0f &&
+	   	   y <= spr_dice.getOrigin().y + spr_dice.getGlobalBounds().height / 2.0f;
 }
 
 Sprite Dice::getRenderer()

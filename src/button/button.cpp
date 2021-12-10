@@ -8,9 +8,11 @@
 #include "scenes/credits/credits.h"
 
 using std::cout;
+using sf::Mouse;
+using sf::Window;
 
 
-Button::Button(float w, float h, float x, float y, Color color, string display) : Entity({x, y}, {w, h})
+Button::Button(float w, float h, float x, float y, Color color, string display) : Entity({x, y})
 {
 	this->color = color;
 
@@ -56,21 +58,17 @@ Button::Button(float w, float h, float x, float y, Color color, string display) 
 		multiplier = 1.1f;
 	}
 
-	text.setCharacterSize(w * multiplier / text.getString().getSize());
+	text.setCharacterSize(static_cast<unsigned int>(w * multiplier / text.getString().getSize()));
 	text.setOrigin(text.getGlobalBounds().width / 2.0f, text.getGlobalBounds().height / 2.0f);
 	text.setPosition({ rectangle.getPosition().x, rectangle.getPosition().y});
 
+	setSize(w, h);
 
 	cout << "Se ha creado un boton.\n";
 }
 Button::~Button()
 {
 	cout << "El boton ha sido eliminado de la memoria.\n";
-}
-
-bool Button::isClicked()
-{
-	return sf::Mouse::isButtonPressed(sf::Mouse::Left);
 }
 
 void Button::update(float deltaTime)
@@ -82,4 +80,12 @@ void Button::draw(RenderWindow* window)
 	window->draw(rectangle);
 	window->draw(internalRectangle);
 	window->draw(text);
+}
+
+bool Button::isClicked(int x, int y)
+{
+	return x >= rectangle.getPosition().x - rectangle.getSize().x / 2.0f &&
+	       x <= rectangle.getPosition().x + rectangle.getSize().x / 2.0f &&
+	       y >= rectangle.getPosition().y - rectangle.getSize().y / 2.0f &&
+	       y <= rectangle.getPosition().y + rectangle.getSize().y / 2.0f;
 }

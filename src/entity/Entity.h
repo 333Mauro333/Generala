@@ -3,6 +3,8 @@
 
 #include "SFML/Graphics.hpp"
 
+using sf::RenderWindow;
+
 
 struct Vector2f
 {
@@ -13,14 +15,16 @@ struct Vector2f
 class Entity
 {
 public:
-	Entity(Vector2f position, Vector2f size);
+	Entity(Vector2f position);
 	virtual ~Entity();
 
 	virtual void update(float deltaTime) = 0;
-	virtual void draw(sf::RenderWindow* window) = 0;
+	virtual void draw(RenderWindow* window) = 0;
 	virtual bool collisionWith(Entity* entity);
 	
-	virtual bool isClicked();
+	virtual bool isClicked(int x, int y);
+
+	void setSize(float x, float y);
 
 	Vector2f getPosition();
 	Vector2f getSize();

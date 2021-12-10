@@ -5,10 +5,8 @@
 using std::cout;
 
 
-MenuGameMode::MenuGameMode(RenderWindow* win) : Scene()
+MenuGameMode::MenuGameMode() : Scene()
 {
-	this->win = win;
-
 	cout << "Se ha creado una pantalla de modo de juego.\n";
 }
 MenuGameMode::~MenuGameMode()

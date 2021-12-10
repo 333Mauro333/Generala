@@ -4,13 +4,12 @@
 #include "scenes/scene.h"
 
 
-class MenuGameMode : Scene
+class MenuGameMode : public Scene
 {
 private:
-	RenderWindow* win;
 
 public:
-	MenuGameMode(RenderWindow* window);
+	MenuGameMode();
 	~MenuGameMode();
 
 	void init() override;

@@ -5,9 +5,11 @@
 
 #include "SFML/Graphics.hpp"
 
-using sf::Color;
 using sf::RectangleShape;
 using sf::RenderWindow;
+using sf::Color;
+using sf::Font;
+using sf::Text;
 using std::string;
 
 
@@ -19,14 +21,14 @@ private:
 	RectangleShape rectangle;
 	RectangleShape internalRectangle;
 	Color color;
-	sf::Font font;
-	sf::Text text;
+	Font font;
+	Text text;
 
 public:
 	Button(float x, float y, float w, float h, Color color, string display);
 	~Button();
 
-	bool isClicked() override;
+	bool isClicked(int x, int y) override;
 
 	void update(float deltaTime) override;
 	void draw(RenderWindow* window) override;

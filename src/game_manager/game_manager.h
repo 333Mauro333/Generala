@@ -4,6 +4,8 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 
+#include <iostream>
+
 using sf::RenderWindow;
 
 
@@ -17,7 +19,7 @@ private:
 	void destroy();
 
 public:
-	RenderWindow* window = new RenderWindow(sf::VideoMode(600, 800), "Generala");
+	RenderWindow* window;
 
 	GameManager(unsigned int width, unsigned int height, const std::string windowTitle);
 	~GameManager();

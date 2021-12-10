@@ -4,20 +4,25 @@
 #include "scenes/scene.h"
 #include "dice/dice.h"
 
-class Gameplay : Scene
+using sf::RenderWindow;
+
+
+class Gameplay : public Scene
 {
 private:
-	RenderWindow* win;
 	Dice* dices[5];
+	RenderWindow window;
 
 public:
-	Gameplay(RenderWindow* window);
+	Gameplay();
 	~Gameplay();
 
 	void init() override;
 	void update(float deltaTime) override;
 	void draw() override;
 	void destroy() override;
+
+	SCENE_TYPE getSceneType() override;
 };
 
 #endif // !GAMEPLAY_H

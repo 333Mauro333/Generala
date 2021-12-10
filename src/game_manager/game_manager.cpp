@@ -8,8 +8,11 @@
 using std::cout;
 
 
+
 GameManager::GameManager(unsigned int width, unsigned int height, const std::string windowTitle)
 {
+    window = new RenderWindow(sf::VideoMode(600, 800), "SFML window");
+
 	cout << "Se ha creado un GameManager.\n";
 }
 GameManager::~GameManager()
@@ -62,6 +65,16 @@ void GameManager::checkEvents()
     while (window->pollEvent(event))
     {
         if (event.type == sf::Event::Closed)
+        {
             window->close();
+        }
+
+        if (event.type == sf::Event::MouseButtonPressed)
+        {
+
+
+            std::cout << "new mouse x: " << event.mouseButton.x << std::endl;
+            std::cout << "new mouse y: " << event.mouseButton.y << std::endl;
+        }
     }
 }

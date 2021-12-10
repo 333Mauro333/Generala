@@ -4,6 +4,8 @@
 #include "game_manager/game_manager.h"
 
 
+enum class SCENE_TYPE { MAIN_MENU, GAMEPLAY };
+
 class Scene
 {
 private:
@@ -16,6 +18,8 @@ public:
 	virtual void update(float deltaTime) = 0;
 	virtual void draw() = 0;
 	virtual void destroy() = 0;
+
+	virtual SCENE_TYPE getSceneType() = 0;
 };
 
 #endif // !SCENE_H

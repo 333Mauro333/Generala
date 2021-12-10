@@ -2,21 +2,24 @@
 
 #include <iostream>
 
+#include "scene_manager/scene_manager.h"
+#include "scenes/gameplay/gameplay.h"
+
 using std::cout;
 
 
-MainMenu::MainMenu(RenderWindow* win) : Scene()
+MainMenu::MainMenu(RenderWindow* window) : Scene()
 {
-	this->win = win;
+	this->window = window;
 
-	back.setSize({ static_cast<float>(win->getSize().x), static_cast<float>(win->getSize().y) });
+	back.setSize({ static_cast<float>(window->getSize().x), static_cast<float>(window->getSize().y) });
 	back.setFillColor(Color::Color(141, 73, 37));
 
-	button[0] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 2.3f - hButtons / 2.0f, Color::Yellow, "JUGAR");
-	button[1] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 3.1f- hButtons / 2.0f, Color::Yellow, "OPCIONES");
-	button[2] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 3.9f - hButtons / 2.0f, Color::Yellow, "AYUDA");
-	button[3] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 4.7f - hButtons / 2.0f, Color::Yellow, "CREDITOS");
-	button[4] = new Button(wButtons, hButtons, win->getSize().x / 2.0f, win->getSize().y / 6 * 5.5f - hButtons / 2.0f, Color::Yellow, "SALIR");
+	button[0] = new Button(wButtons, hButtons, window->getSize().x / 2.0f, window->getSize().y / 6 * 2.3f - hButtons / 2.0f, Color::Yellow, "JUGAR");
+	button[1] = new Button(wButtons, hButtons, window->getSize().x / 2.0f, window->getSize().y / 6 * 3.1f- hButtons / 2.0f, Color::Yellow, "OPCIONES");
+	button[2] = new Button(wButtons, hButtons, window->getSize().x / 2.0f, window->getSize().y / 6 * 3.9f - hButtons / 2.0f, Color::Yellow, "AYUDA");
+	button[3] = new Button(wButtons, hButtons, window->getSize().x / 2.0f, window->getSize().y / 6 * 4.7f - hButtons / 2.0f, Color::Yellow, "CREDITOS");
+	button[4] = new Button(wButtons, hButtons, window->getSize().x / 2.0f, window->getSize().y / 6 * 5.5f - hButtons / 2.0f, Color::Yellow, "SALIR");
 
 	font.loadFromFile("res/fonts/over_the_rainbow.ttf");
 	gameTitle.setFont(font);
@@ -24,7 +27,7 @@ MainMenu::MainMenu(RenderWindow* win) : Scene()
 	gameTitle.setFillColor(Color::White);
 	gameTitle.setString("GENERALA");
 	gameTitle.setOrigin(gameTitle.getGlobalBounds().width / 2.0f, gameTitle.getGlobalBounds().height / 2.0f);
-	gameTitle.setPosition(win->getSize().x / 2.0f, win->getSize().y / 7.0f);
+	gameTitle.setPosition(window->getSize().x / 2.0f, window->getSize().y / 7.0f);
 
 	cout << "Se ha creado una pantalla de menu principal.\n";
 }
@@ -43,15 +46,28 @@ void MainMenu::update(float deltaTime)
 }
 void MainMenu::draw()
 {
-	win->draw(back);
+	window->draw(back);
 
 	for (int i = 0; i < 5; i++)
 	{
-		button[i]->draw(win);
+		button[i]->draw(window);
 	}
-	win->draw(gameTitle);
+	window->draw(gameTitle);
 }
 void MainMenu::destroy()
 {
 
+}
+
+void MainMenu::checkClicks(int x, int y)
+{
+	if (button[0]->isClicked(x, y))
+	{
+		SceneManager::chargeNewScene(new Gameplay());
+	}
+}
+
+SCENE_TYPE MainMenu::getSceneType()
+{
+	return SCENE_TYPE::MAIN_MENU;
 }

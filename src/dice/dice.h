@@ -13,20 +13,20 @@ using sf::RenderWindow;
 class Dice : public Entity
 {
 private:
-	static Texture tex_dices[6];
+	Texture tex_dices[6];
 	Sprite spr_dice;
 	bool launching;
 	bool selected;
 	Vector2f originPosition;
 
-	static void initTextures();
+	void initTextures();
 	void rolling(float deltaTime);
 	void stop();
 
 public:
 	static int amountOfLaunches;
 
-	Dice(Vector2f position, Vector2f size);
+	Dice(Vector2f position);
 	~Dice();
 
 	void update(float deltaTime) override;
@@ -34,6 +34,8 @@ public:
 
 	void setRandomNumber(int randomNum);
 	void launch();
+
+	bool isClicked(int x, int y) override;
 
 	Sprite getRenderer();
 };
