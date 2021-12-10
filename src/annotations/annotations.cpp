@@ -23,7 +23,7 @@ Annotations::Annotations(float x, float y, float w, float h) : Entity({x, y})
 		points[i].points = 0;
 		points[i].position = { x + w / 1.125f, y + h / 13 * (i + 1) };
 		points[i].text.setFont(font);
-		points[i].text.setFillColor(Color::Black);
+		points[i].text.setFillColor(Color(139, 0, 0));
 		points[i].text.setPosition(points[i].position.x, points[i].position.y);
 		points[i].text.setString("0");
 		points[i].annotated = false;
@@ -89,9 +89,12 @@ void Annotations::draw(RenderWindow* window)
 	}
 }
 
-void Annotations::updateScore(int ind)
+void Annotations::updateScore(int ind, CATEGORY category, Dice* dice[])
 {
+	points[ind].points = getPoints(category, dice);
 	points[ind].str_points = std::to_string(points[ind].points);
+	points[ind].annotated = true;
+	points[ind].text.setFillColor(Color::Black);
 	points[ind].text.setString(points[ind].str_points);
 	points[ind].text.setPosition(points[ind].position.x, points[ind].position.y);
 

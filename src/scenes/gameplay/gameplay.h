@@ -25,6 +25,8 @@ private:
 	Font font;
 	Text textMessage;
 
+	int count;
+
 	void showMessagePoints(CATEGORY category);
 
 public:

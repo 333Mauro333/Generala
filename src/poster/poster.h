@@ -22,6 +22,7 @@ private:
 	Font font;
 	Text text;
 	bool preSelected;
+	bool inhabilited;
 
 public:
 	Poster(float x, float y, float w, float h, Color color, Color border);
@@ -32,9 +33,11 @@ public:
 	
 	void shine();
 	void opaque();
+	void inhabilite();
 
 	bool isInside(int x, int y) override;
 	bool isShining();
+	bool isInhabilited();
 
 	void setTextConfiguration(string display, Color color, unsigned int size, int x, int y);
 };

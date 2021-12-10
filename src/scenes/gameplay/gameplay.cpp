@@ -10,8 +10,9 @@ Gameplay::Gameplay(RenderWindow* window) : Scene()
 	this->window = window;
 	back.setFillColor(Color(256, 128, 100));
 	back.setSize({ static_cast<float>(window->getSize().x), static_cast<float>(window->getSize().y) });
+	count = 3;
 
-	buttonThrow = new Button(window->getSize().x / 2.0f, window->getSize().y / 1.1f, window->getSize().x / 3.0f, window->getSize().y / 10.0f, Color::Blue, "Tirar");
+	buttonThrow = new Button(window->getSize().x / 2.0f, window->getSize().y / 1.1f, window->getSize().x / 3.0f, window->getSize().y / 10.0f, Color::Blue, "Tirar (" + std::to_string(count) + ")");
 
 	dices[0] = new Dice({ window->getSize().x / 6.0f * 1.0f, window->getSize().y / 1.25f });
 	dices[1] = new Dice({ window->getSize().x / 6.0f * 2.0f, window->getSize().y / 1.25f });
@@ -41,6 +42,7 @@ Gameplay::Gameplay(RenderWindow* window) : Scene()
 	textMessage.setFillColor(Color::Black);
 	textMessage.setCharacterSize(30);
 	textMessage.setPosition(window->getSize().x / 2.0f, window->getSize().y / 1.425f);
+
 
 	cout << "Se ha creado una pantalla de gameplay.\n";
 }
@@ -75,7 +77,7 @@ void Gameplay::draw()
 
 	for (int i = 0; i < Annotations::getPosterArraySize(); i++)
 	{
-		if (annotations->getPoster(i)->isShining())
+		if (annotations->getPoster(i)->isShining() && dices[0]->isActive())
 		{
 			showMessagePoints(static_cast<CATEGORY>(i));
 		}
@@ -95,20 +97,35 @@ void Gameplay::checkClicks(int x, int y)
 	{
 		if (dices[i]->isInside(x, y))
 		{
-			cout << "Clicked " << i + 1 << "!\n";
 			dices[i]->select();
 		}
 	}
 
-	if (buttonThrow->isInside(x, y))
+	if (buttonThrow->isInside(x, y) && count > 0)
 	{
 		for (int i = 0; i < 5; i++)
 		{
 			dices[i]->launch();
 		}
+
+		count--;
+		buttonThrow->setString("Tirar (" + std::to_string(count) + ")");
+	}
+
+	for (int i = 0; i < Annotations::getPosterArraySize() - 1; i++)
+	{
+		if (annotations->getPoster(i)->isInside(x, y) && dices[0]->isActive())
+		{
+			annotations->getPoster(i)->inhabilite();
+			for (int j = 0; j < 5; j++)
+			{
+				dices[j]->deactivate();
+				annotations->updateScore(i, static_cast<CATEGORY>(i - 1), dices);
+				count = 3;
+			}
+		}
 	}
 }
-
 void Gameplay::checkMouseCollision(int x, int y)
 {
 	for (int i = 0; i < Annotations::getPosterArraySize(); i++)

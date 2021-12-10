@@ -44,7 +44,7 @@ public:
 	void update(float deltaTime) override;
 	void draw(RenderWindow* window) override;
 
-	void updateScore(int ind);
+	void updateScore(int ind, CATEGORY category, Dice* dice[]);
 
 	bool isInside(int x, int y) override;
 	Poster* getPoster(int ind);

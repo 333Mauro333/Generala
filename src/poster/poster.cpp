@@ -8,6 +8,7 @@ Poster::Poster(float x, float y, float w, float h, Color color, Color border = C
 	this->color = color;
 	this->border = border;
 	preSelected = false;
+	inhabilited = false;
 
 	rectangle.setPosition(x, y);
 	rectangle.setSize({ w, h });
@@ -36,15 +37,26 @@ void Poster::draw(RenderWindow* window)
 
 void Poster::shine()
 {
-	preSelected = true;
-	rectangle.setFillColor(Color(200, 200, 200));
-	internalRectangle.setFillColor(Color(200, 200, 200));
+	if (!inhabilited)
+	{
+		preSelected = true;
+		rectangle.setFillColor(Color(200, 200, 200));
+		internalRectangle.setFillColor(Color(200, 200, 200));
+	}
 }
 void Poster::opaque()
 {
-	preSelected = false;
-	rectangle.setFillColor(border);
-	internalRectangle.setFillColor(color);
+	if (!inhabilited)
+	{
+		preSelected = false;
+		rectangle.setFillColor(border);
+		internalRectangle.setFillColor(color);
+	}
+}
+void Poster::inhabilite()
+{
+	rectangle.setFillColor(Color(100, 100, 100));
+	inhabilited = true;
 }
 
 bool Poster::isInside(int x, int y)
@@ -57,6 +69,10 @@ bool Poster::isInside(int x, int y)
 bool Poster::isShining()
 {
 	return preSelected;
+}
+bool Poster::isInhabilited()
+{
+	return inhabilited;
 }
 
 void Poster::setTextConfiguration(string display, Color color, unsigned int size, int x, int y)
