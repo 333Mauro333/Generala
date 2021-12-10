@@ -14,6 +14,11 @@ Scene::~Scene()
 	cout << "La scene ha sido eliminada de la memoria.\n";
 }
 
+void Scene::update(float deltaTime)
+{
+
+}
+
 void Scene::checkMouseCollision(int x, int y)
 {
 

@@ -11,7 +11,7 @@ using std::cout;
 Gameplay::Gameplay(RenderWindow* window) : Scene()
 {
 	this->window = window;
-	back.setFillColor(Color(256, 128, 100));
+	back.setFillColor(Color(static_cast<sf::Uint8>(256), static_cast < sf::Uint8>(128), static_cast < sf::Uint8>(100)));
 	back.setSize({ static_cast<float>(window->getSize().x), static_cast<float>(window->getSize().y) });
 	count = 3;
 

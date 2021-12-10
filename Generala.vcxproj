@@ -101,8 +101,8 @@
       <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)res\fonts\" "$(SolutionDir)bin\$(Platform)\$(Configuration)\res\fonts\"
-xcopy "$(SolutionDir)res\sprites\gameplay\" "$(SolutionDir)bin\$(Platform)\$(Configuration)\res\sprites\gameplay\"</Command>
+      <Command>xcopy "$(SolutionDir)res\fonts\" "$(SolutionDir)bin\$(Platform)\$(Configuration)\res\fonts\"xcopy "$(SolutionDir)res\fonts\" "$(SolutionDir)bin\$(Platform)\$(Configuration)\res\fonts\" /Y
+xcopy "$(SolutionDir)res\sprites\gameplay\" "$(SolutionDir)bin\$(Platform)\$(Configuration)\res\sprites\gameplay\" /Y</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>
@@ -129,8 +129,8 @@ xcopy "$(SolutionDir)res\sprites\gameplay\" "$(SolutionDir)bin\$(Platform)\$(Con
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)res\fonts\" "$(SolutionDir)bin\$(Platform)\$(Configuration)\res\fonts\"
-xcopy "$(SolutionDir)res\sprites\gameplay\" "$(SolutionDir)bin\$(Platform)\$(Configuration)\res\sprites\gameplay\"</Command>
+      <Command>xcopy "$(SolutionDir)res\fonts\" "$(SolutionDir)bin\$(Platform)\$(Configuration)\res\fonts\"xcopy "$(SolutionDir)res\fonts\" "$(SolutionDir)bin\$(Platform)\$(Configuration)\res\fonts\" /Y
+xcopy "$(SolutionDir)res\sprites\gameplay\" "$(SolutionDir)bin\$(Platform)\$(Configuration)\res\sprites\gameplay\" /Y</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>
