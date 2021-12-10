@@ -19,20 +19,11 @@
     <Filter Include="src\scenes">
       <UniqueIdentifier>{45651496-c64f-4c23-8e43-5bb8af9aa938}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\scenes\credits">
-      <UniqueIdentifier>{d8779421-00b6-427b-94d8-229563ed0519}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\scenes\gameplay">
       <UniqueIdentifier>{397a1353-f28a-4a20-826e-a60c544df287}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\scenes\main_menu">
       <UniqueIdentifier>{6901d3ec-ba0a-4f0c-b134-b5af12fece48}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\scenes\menu_game_mode">
-      <UniqueIdentifier>{36e0915a-ee5f-4f1e-bca0-bba05d6ac6c8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\scenes\options">
-      <UniqueIdentifier>{b1dd8f11-eac7-49f3-a1d6-db97be97a5d7}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\scene_manager">
       <UniqueIdentifier>{9b872baa-c652-4ed2-9343-3235225fd24d}</UniqueIdentifier>
@@ -48,6 +39,9 @@
     </Filter>
     <Filter Include="src\poster">
       <UniqueIdentifier>{a8b4c477-fa24-45fb-9476-1c8ab9521759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes\help">
+      <UniqueIdentifier>{0d0b7619-e6f9-48a7-a227-a7dcdba7968e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -65,15 +59,6 @@
     </ClCompile>
     <ClCompile Include="src\scenes\scene.cpp">
       <Filter>src\scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="src\scenes\menu_game_mode\menu_game_mode.cpp">
-      <Filter>src\scenes\menu_game_mode</Filter>
-    </ClCompile>
-    <ClCompile Include="src\scenes\credits\credits.cpp">
-      <Filter>src\scenes\credits</Filter>
-    </ClCompile>
-    <ClCompile Include="src\scenes\options\options.cpp">
-      <Filter>src\scenes\options</Filter>
     </ClCompile>
     <ClCompile Include="src\scenes\gameplay\gameplay.cpp">
       <Filter>src\scenes\gameplay</Filter>
@@ -109,15 +94,6 @@
     </ClInclude>
     <ClInclude Include="src\scenes\scene.h">
       <Filter>src\scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scenes\menu_game_mode\menu_game_mode.h">
-      <Filter>src\scenes\menu_game_mode</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scenes\credits\credits.h">
-      <Filter>src\scenes\credits</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scenes\options\options.h">
-      <Filter>src\scenes\options</Filter>
     </ClInclude>
     <ClInclude Include="src\scenes\gameplay\gameplay.h">
       <Filter>src\scenes\gameplay</Filter>
