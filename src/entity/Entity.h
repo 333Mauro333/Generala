@@ -24,12 +24,17 @@ public:
 	
 	virtual bool isClicked(int x, int y) = 0;
 
+	void setActive(bool active);
 	void setSize(float x, float y);
+	void setPosition(float x, float y);
 
 	Vector2f getPosition();
 	Vector2f getSize();
+	bool isActive();
 
 private:
+	bool active;
+
 	Vector2f position;
 	Vector2f size;
 };

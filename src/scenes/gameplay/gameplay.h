@@ -3,6 +3,7 @@
 
 #include "scenes/scene.h"
 #include "dice/dice.h"
+#include "button/button.h"
 
 using sf::RenderWindow;
 
@@ -10,8 +11,11 @@ using sf::RenderWindow;
 class Gameplay : public Scene
 {
 private:
-	Dice* dices[5];
 	RenderWindow* window;
+
+	Button* buttonThrow;
+	Dice* dices[5];
+
 
 public:
 	Gameplay(RenderWindow* window);

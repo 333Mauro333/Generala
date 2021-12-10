@@ -9,6 +9,7 @@ Entity::Entity(Vector2f position)
 {
 	this->position = position;
 	size = { 0.0f, 0.0f };
+	active = true;
 
 	cout << "Se ha creado una entidad.\n";
 }
@@ -23,10 +24,17 @@ bool Entity::collisionWith(Entity* entity)
 		   position.y + size.y > entity->getPosition().y && position.y < entity->getPosition().y + entity->getSize().y;
 }
 
+void Entity::setActive(bool active)
+{
+	this->active = active;
+}
 void Entity::setSize(float w, float h)
 {
-	size.x = w;
-	size.y = h;
+	size = { w, h };
+}
+void Entity::setPosition(float x, float y)
+{
+	position = { x, y };
 }
 
 Vector2f Entity::getPosition()
@@ -36,4 +44,8 @@ Vector2f Entity::getPosition()
 Vector2f Entity::getSize()
 {
 	return size;
+}
+bool Entity::isActive()
+{
+	return active;
 }

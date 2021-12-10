@@ -17,6 +17,7 @@ private:
 	Sprite spr_dice;
 	bool launching;
 	bool selected;
+	int number;
 	Vector2f originPosition;
 
 	void initTextures();
@@ -32,12 +33,14 @@ public:
 	void update(float deltaTime) override;
 	void draw(RenderWindow* window) override;
 
+	void select();
 	void setRandomNumber(int randomNum);
 	void launch();
 
 	bool isClicked(int x, int y) override;
 
 	Sprite getRenderer();
+	int getNumber();
 };
 
 #endif // !DICE_H

@@ -15,11 +15,11 @@ MainMenu::MainMenu(RenderWindow* window) : Scene()
 	back.setSize({ static_cast<float>(window->getSize().x), static_cast<float>(window->getSize().y) });
 	back.setFillColor(Color::Color(141, 73, 37));
 
-	button[0] = new Button(wButtons, hButtons, window->getSize().x / 2.0f, window->getSize().y / 6 * 2.3f - hButtons / 2.0f, Color::Yellow, "JUGAR");
-	button[1] = new Button(wButtons, hButtons, window->getSize().x / 2.0f, window->getSize().y / 6 * 3.1f- hButtons / 2.0f, Color::Yellow, "OPCIONES");
-	button[2] = new Button(wButtons, hButtons, window->getSize().x / 2.0f, window->getSize().y / 6 * 3.9f - hButtons / 2.0f, Color::Yellow, "AYUDA");
-	button[3] = new Button(wButtons, hButtons, window->getSize().x / 2.0f, window->getSize().y / 6 * 4.7f - hButtons / 2.0f, Color::Yellow, "CREDITOS");
-	button[4] = new Button(wButtons, hButtons, window->getSize().x / 2.0f, window->getSize().y / 6 * 5.5f - hButtons / 2.0f, Color::Yellow, "SALIR");
+	button[0] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 2.3f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "JUGAR");
+	button[1] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 3.1f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "OPCIONES");
+	button[2] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 3.9f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "AYUDA");
+	button[3] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 4.7f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "CREDITOS");
+	button[4] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 5.5f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "SALIR");
 
 	font.loadFromFile("res/fonts/over_the_rainbow.ttf");
 	gameTitle.setFont(font);

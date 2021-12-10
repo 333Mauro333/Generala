@@ -12,7 +12,7 @@ using sf::Mouse;
 using sf::Window;
 
 
-Button::Button(float w, float h, float x, float y, Color color, string display) : Entity({x, y})
+Button::Button(float x, float y, float w, float h, Color color, string display) : Entity({x, y})
 {
 	this->color = color;
 

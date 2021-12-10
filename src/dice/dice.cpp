@@ -23,6 +23,7 @@ Dice::Dice(Vector2f position) : Entity(position)
 
 	launching = false;
 	selected = false;
+	number = 1;
 
 	cout << "Se ha creado un nuevo dice.\n";
 }
@@ -33,26 +34,45 @@ Dice::~Dice()
 
 void Dice::update(float deltaTime)
 {
-	if (launching)
+	if (selected)
 	{
-		rolling(deltaTime);
+		spr_dice.setColor(sf::Color::Green);
+	}
+	else
+	{
+		spr_dice.setColor(sf::Color::White);
 	}
 }
 void Dice::draw(RenderWindow* window)
 {
-	window->draw(spr_dice);
+	if (isActive())
+	{
+		window->draw(spr_dice);
+	}
 }
 
+void Dice::select()
+{
+	selected = !selected;
+}
 void Dice::setRandomNumber(int randomNum)
 {
 	spr_dice = Sprite(tex_dices[randomNum - 1]);
+
+	number = randomNum;
 }
 void Dice::launch()
 {
-	if (!selected && amountOfLaunches >= 3)
+	if (!isActive())
 	{
-		launching = true;
-		spr_dice.setPosition(originPosition.x + 650, originPosition.y);
+		setActive(true);
+	}
+
+	if (!selected)
+	{
+		setRandomNumber(rand() % 6 + 1);
+		spr_dice.setOrigin(spr_dice.getGlobalBounds().width / 2.0f, spr_dice.getGlobalBounds().height / 2.0f);
+		spr_dice.setPosition(originPosition.x, originPosition.y);
 	}
 }
 
@@ -67,6 +87,10 @@ bool Dice::isClicked(int x, int y)
 Sprite Dice::getRenderer()
 {
 	return spr_dice;
+}
+int Dice::getNumber()
+{
+	return number;
 }
 
 void Dice::initTextures()
