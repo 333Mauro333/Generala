@@ -121,8 +121,12 @@ void Gameplay::checkClicks(int x, int y)
 			for (int j = 0; j < 5; j++)
 			{
 				dices[j]->deactivate();
-				count = 3;
 			}
+			count = 3;
+
+			string message = "";
+			message += "Tirar (" + std::to_string(count) + ")";
+			buttonThrow->setString(message);
 		}
 	}
 
