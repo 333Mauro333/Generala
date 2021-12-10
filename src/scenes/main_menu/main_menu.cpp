@@ -62,13 +62,8 @@ void MainMenu::destroy()
 
 void MainMenu::checkClicks(int x, int y)
 {
-	if (button[0]->isClicked(x, y))
+	if (button[0]->isInside(x, y))
 	{
 		SceneManager::chargeNewScene(new Gameplay(window));
 	}
-}
-
-SCENE_TYPE MainMenu::getSceneType()
-{
-	return SCENE_TYPE::MAIN_MENU;
 }

@@ -33,10 +33,7 @@ public:
 	void draw() override;
 	void destroy() override;
 	void checkClicks(int x, int y) override;
-
-	SCENE_TYPE getSceneType() override;
 };
-
 
 #endif // !MAIN_MENU_H
 

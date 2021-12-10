@@ -36,8 +36,10 @@ public:
 	void select();
 	void setRandomNumber(int randomNum);
 	void launch();
+	void activate();
+	void deactivate();
 
-	bool isClicked(int x, int y) override;
+	bool isInside(int x, int y) override;
 
 	Sprite getRenderer();
 	int getNumber();

@@ -75,8 +75,17 @@ void Dice::launch()
 		spr_dice.setPosition(originPosition.x, originPosition.y);
 	}
 }
+void Dice::activate()
+{
+	setActive(true);
+}
+void Dice::deactivate()
+{
+	setActive(false);
+	selected = false;
+}
 
-bool Dice::isClicked(int x, int y)
+bool Dice::isInside(int x, int y)
 {
 	return x >= spr_dice.getPosition().x - spr_dice.getGlobalBounds().width / 2.0f &&
 	   	   x <= spr_dice.getPosition().x + spr_dice.getGlobalBounds().width / 2.0f &&

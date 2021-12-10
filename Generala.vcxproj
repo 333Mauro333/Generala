@@ -157,6 +157,7 @@
     <ClCompile Include="src\fade\fade.cpp" />
     <ClCompile Include="src\game_manager\game_manager.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\poster\poster.cpp" />
     <ClCompile Include="src\scenes\credits\credits.cpp" />
     <ClCompile Include="src\scenes\gameplay\gameplay.cpp" />
     <ClCompile Include="src\scenes\main_menu\main_menu.cpp" />
@@ -172,6 +173,7 @@
     <ClInclude Include="src\entity\entity.h" />
     <ClInclude Include="src\fade\fade.h" />
     <ClInclude Include="src\game_manager\game_manager.h" />
+    <ClInclude Include="src\poster\poster.h" />
     <ClInclude Include="src\scenes\credits\credits.h" />
     <ClInclude Include="src\scenes\gameplay\gameplay.h" />
     <ClInclude Include="src\scenes\main_menu\main_menu.h" />

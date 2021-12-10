@@ -76,5 +76,12 @@ void GameManager::checkEvents()
             std::cout << "new mouse x: " << event.mouseButton.x << std::endl;
             std::cout << "new mouse y: " << event.mouseButton.y << std::endl;
         }
+
+        if (event.type == sf::Event::MouseMoved)
+        {
+            SceneManager::getActualScene()->checkMouseCollision(event.mouseMove.x, event.mouseMove.y);
+            std::cout << "new mouse x: " << event.mouseMove.x << std::endl;
+            std::cout << "new mouse y: " << event.mouseMove.y << std::endl;
+        }
     }
 }

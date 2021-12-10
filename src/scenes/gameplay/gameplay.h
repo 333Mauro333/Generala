@@ -7,17 +7,25 @@
 #include "annotations/annotations.h"
 
 using sf::RenderWindow;
+using sf::Font;
+using sf::Text;
 
 
 class Gameplay : public Scene
 {
 private:
 	RenderWindow* window;
+	RectangleShape back;
 
 	Button* buttonThrow;
 	Dice* dices[5];
 
 	Annotations* annotations;
+
+	Font font;
+	Text textMessage;
+
+	void showMessagePoints(CATEGORY category);
 
 public:
 	Gameplay(RenderWindow* window);
@@ -28,8 +36,7 @@ public:
 	void draw() override;
 	void destroy() override;
 	void checkClicks(int x, int y) override;
-
-	SCENE_TYPE getSceneType() override;
+	void checkMouseCollision(int x, int y);
 };
 
 #endif // !GAMEPLAY_H

@@ -4,8 +4,6 @@
 #include "game_manager/game_manager.h"
 
 
-enum class SCENE_TYPE { MAIN_MENU, GAMEPLAY };
-
 class Scene
 {
 private:
@@ -19,8 +17,7 @@ public:
 	virtual void draw() = 0;
 	virtual void destroy() = 0;
 	virtual void checkClicks(int x, int y) = 0;
-
-	virtual SCENE_TYPE getSceneType() = 0;
+	virtual void checkMouseCollision(int x, int y);
 };
 
 #endif // !SCENE_H

@@ -32,7 +32,7 @@ Button::Button(float x, float y, float w, float h, Color color, string display) 
 	}
 	else
 	{
-		cout << "Font was loaded.\n";
+		cout << "La fuente ha sido cargada exitosamente.\n";
 	}
 
 	text.setFont(font);
@@ -92,7 +92,7 @@ void Button::setString(string name)
 	text.setString(name);
 }
 
-bool Button::isClicked(int x, int y)
+bool Button::isInside(int x, int y)
 {
 	return x >= rectangle.getPosition().x - rectangle.getSize().x / 2.0f &&
 	       x <= rectangle.getPosition().x + rectangle.getSize().x / 2.0f &&

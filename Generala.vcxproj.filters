@@ -46,6 +46,9 @@
     <Filter Include="src\annotations">
       <UniqueIdentifier>{9d1ed3ae-1ca1-4b8c-945b-ac17e6379cc1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\poster">
+      <UniqueIdentifier>{a8b4c477-fa24-45fb-9476-1c8ab9521759}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -90,6 +93,9 @@
     <ClCompile Include="src\annotations\annotations.cpp">
       <Filter>src\annotations</Filter>
     </ClCompile>
+    <ClCompile Include="src\poster\poster.cpp">
+      <Filter>src\poster</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\entity\entity.h">
@@ -130,6 +136,9 @@
     </ClInclude>
     <ClInclude Include="src\annotations\annotations.h">
       <Filter>src\annotations</Filter>
+    </ClInclude>
+    <ClInclude Include="src\poster\poster.h">
+      <Filter>src\poster</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
