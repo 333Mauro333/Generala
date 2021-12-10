@@ -114,13 +114,14 @@ void Gameplay::checkClicks(int x, int y)
 
 	for (int i = 0; i < Annotations::getPosterArraySize() - 1; i++)
 	{
-		if (annotations->getPoster(i)->isInside(x, y) && dices[0]->isActive())
+		if (annotations->getPoster(i)->isInside(x, y) && i != 0 && dices[0]->isActive() && !annotations->getPoster(i)->isInhabilited())
 		{
 			annotations->getPoster(i)->inhabilite();
+			annotations->getPoster(i)->opaque();
+			annotations->updateScore(i - 1, static_cast<CATEGORY>(i), dices);
 			for (int j = 0; j < 5; j++)
 			{
 				dices[j]->deactivate();
-				annotations->updateScore(i, static_cast<CATEGORY>(i - 1), dices);
 				count = 3;
 			}
 		}

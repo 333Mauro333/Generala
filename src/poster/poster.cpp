@@ -68,6 +68,11 @@ bool Poster::isInside(int x, int y)
 }
 bool Poster::isShining()
 {
+	if (inhabilited)
+	{
+		return false;
+	}
+
 	return preSelected;
 }
 bool Poster::isInhabilited()
