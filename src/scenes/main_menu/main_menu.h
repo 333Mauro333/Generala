@@ -30,7 +30,6 @@ public:
 	MainMenu(RenderWindow* window);
 	~MainMenu();
 
-	void init() override;
 	void update(float deltaTime) override;
 	void draw() override;
 	void destroy() override;

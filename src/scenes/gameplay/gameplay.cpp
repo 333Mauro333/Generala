@@ -54,10 +54,6 @@ Gameplay::~Gameplay()
 	cout << "La pantalla de gameplay ha sido eliminada de la memoria.\n";
 }
 
-void Gameplay::init()
-{
-
-}
 void Gameplay::update(float deltaTime)
 {
 	for (int i = 0; i < 5; i++)

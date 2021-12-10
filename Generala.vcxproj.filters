@@ -81,6 +81,9 @@
     <ClCompile Include="src\poster\poster.cpp">
       <Filter>src\poster</Filter>
     </ClCompile>
+    <ClCompile Include="src\scenes\help\help.cpp">
+      <Filter>src\scenes\help</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\entity\entity.h">
@@ -115,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="src\poster\poster.h">
       <Filter>src\poster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scenes\help\help.h">
+      <Filter>src\scenes\help</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

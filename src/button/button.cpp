@@ -5,7 +5,6 @@
 #include <SFML/Window.hpp>
 
 #include "game_manager/game_manager.h"
-#include "scenes/credits/credits.h"
 
 using std::cout;
 using sf::Mouse;

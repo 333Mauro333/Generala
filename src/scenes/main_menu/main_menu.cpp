@@ -4,6 +4,7 @@
 
 #include "scene_manager/scene_manager.h"
 #include "scenes/gameplay/gameplay.h"
+#include "scenes/help/help.h"
 
 using std::cout;
 
@@ -41,10 +42,6 @@ MainMenu::~MainMenu()
 	cout << "La pantalla de menu principal ha sido eliminada de la memoria.\n";
 }
 
-void MainMenu::init()
-{
-
-}
 void MainMenu::update(float deltaTime)
 {
 
@@ -77,5 +74,9 @@ void MainMenu::checkClicks(int x, int y)
 	if (button[0]->isInside(x, y))
 	{
 		SceneManager::chargeNewScene(new Gameplay(window));
+	}
+	else if (button[1]->isInside(x, y))
+	{
+		SceneManager::chargeNewScene(new Help(window));
 	}
 }

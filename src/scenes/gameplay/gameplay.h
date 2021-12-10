@@ -33,7 +33,6 @@ public:
 	Gameplay(RenderWindow* window);
 	~Gameplay();
 
-	void init() override;
 	void update(float deltaTime) override;
 	void draw() override;
 	void destroy() override;

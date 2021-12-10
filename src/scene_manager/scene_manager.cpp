@@ -19,6 +19,4 @@ void SceneManager::chargeNewScene(Scene* newScene)
 	}
 
 	scene = newScene;
-
-	scene->init();
 }
