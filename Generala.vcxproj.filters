@@ -43,6 +43,9 @@
     <Filter Include="src\dice">
       <UniqueIdentifier>{36b00094-8b55-4810-a9fe-379c4eb5156d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\annotations">
+      <UniqueIdentifier>{9d1ed3ae-1ca1-4b8c-945b-ac17e6379cc1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -84,6 +87,9 @@
     <ClCompile Include="src\dice\dice.cpp">
       <Filter>src\dice</Filter>
     </ClCompile>
+    <ClCompile Include="src\annotations\annotations.cpp">
+      <Filter>src\annotations</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\entity\entity.h">
@@ -121,6 +127,9 @@
     </ClInclude>
     <ClInclude Include="src\dice\dice.h">
       <Filter>src\dice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\annotations\annotations.h">
+      <Filter>src\annotations</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

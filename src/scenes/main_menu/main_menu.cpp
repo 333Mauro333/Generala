@@ -52,6 +52,7 @@ void MainMenu::draw()
 	{
 		button[i]->draw(window);
 	}
+
 	window->draw(gameTitle);
 }
 void MainMenu::destroy()

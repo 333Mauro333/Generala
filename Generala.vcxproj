@@ -150,6 +150,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\annotations\annotations.cpp" />
     <ClCompile Include="src\button\button.cpp" />
     <ClCompile Include="src\dice\dice.cpp" />
     <ClCompile Include="src\entity\entity.cpp" />
@@ -165,6 +166,7 @@
     <ClCompile Include="src\scene_manager\scene_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\annotations\annotations.h" />
     <ClInclude Include="src\button\button.h" />
     <ClInclude Include="src\dice\dice.h" />
     <ClInclude Include="src\entity\entity.h" />

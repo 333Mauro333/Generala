@@ -32,6 +32,10 @@ public:
 
 	void update(float deltaTime) override;
 	void draw(RenderWindow* window) override;
+
+	void setString(string name);
+
+	Text getText();
 };
 
 #endif // !BUTTON_H

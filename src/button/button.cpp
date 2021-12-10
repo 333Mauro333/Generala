@@ -30,12 +30,17 @@ Button::Button(float x, float y, float w, float h, Color color, string display) 
 	{
 		cout << "ERROR";
 	}
+	else
+	{
+		cout << "Font was loaded.\n";
+	}
+
 	text.setFont(font);
 	text.setFillColor(sf::Color::Red);
 	text.setStyle(sf::Text::Bold);
 	text.setString(display);
 
-	float multiplier = 0.0f;
+	float multiplier = 1.0f;
 
 	if (display == "JUGAR")
 	{
@@ -82,10 +87,20 @@ void Button::draw(RenderWindow* window)
 	window->draw(text);
 }
 
+void Button::setString(string name)
+{
+	text.setString(name);
+}
+
 bool Button::isClicked(int x, int y)
 {
 	return x >= rectangle.getPosition().x - rectangle.getSize().x / 2.0f &&
 	       x <= rectangle.getPosition().x + rectangle.getSize().x / 2.0f &&
 	       y >= rectangle.getPosition().y - rectangle.getSize().y / 2.0f &&
 	       y <= rectangle.getPosition().y + rectangle.getSize().y / 2.0f;
+}
+
+Text Button::getText()
+{
+	return text;
 }

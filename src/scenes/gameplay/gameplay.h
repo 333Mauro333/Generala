@@ -4,6 +4,7 @@
 #include "scenes/scene.h"
 #include "dice/dice.h"
 #include "button/button.h"
+#include "annotations/annotations.h"
 
 using sf::RenderWindow;
 
@@ -16,6 +17,7 @@ private:
 	Button* buttonThrow;
 	Dice* dices[5];
 
+	Annotations* annotations;
 
 public:
 	Gameplay(RenderWindow* window);

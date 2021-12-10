@@ -22,6 +22,10 @@ Gameplay::Gameplay(RenderWindow* window) : Scene()
 		dices[i]->setActive(false);
 	}
 
+	float annotationsW = window->getSize().x / 1.1f;
+	float annotationsH = window->getSize().y / 1.75f;
+	annotations = new Annotations(window->getSize().x / 2.0f - annotationsW / 2.0f, window->getSize().y / 100.0f, annotationsW, annotationsH);
+
 	cout << "Se ha creado una pantalla de gameplay.\n";
 }
 Gameplay::~Gameplay()
@@ -39,6 +43,8 @@ void Gameplay::update(float deltaTime)
 	{
 		dices[i]->update(deltaTime);
 	}
+
+	annotations->update(deltaTime);
 }
 void Gameplay::draw()
 {
@@ -48,6 +54,7 @@ void Gameplay::draw()
 	}
 
 	buttonThrow->draw(window);
+	annotations->draw(window);
 }
 void Gameplay::destroy()
 {
