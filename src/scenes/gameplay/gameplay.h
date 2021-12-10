@@ -16,8 +16,10 @@ class Gameplay : public Scene
 private:
 	RenderWindow* window;
 	RectangleShape back;
+	RectangleShape backFinal;
 
 	Button* buttonThrow;
+	Button* buttonToMenu;
 	Dice* dices[5];
 
 	Annotations* annotations;
@@ -26,6 +28,7 @@ private:
 	Text textMessage;
 
 	int count;
+	bool end;
 
 	void showMessagePoints(CATEGORY category);
 

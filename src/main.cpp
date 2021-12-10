@@ -4,7 +4,7 @@
 
 int main()
 {
-	GameManager* gameManager = new GameManager(640, 480, "Título escrito acá");
+	GameManager* gameManager = new GameManager(600, 800, "GENERALA");
 	gameManager->run();
 
 	return 0;

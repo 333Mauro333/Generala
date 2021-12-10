@@ -11,7 +11,7 @@ using std::cout;
 
 GameManager::GameManager(unsigned int width, unsigned int height, const std::string windowTitle)
 {
-    window = new RenderWindow(sf::VideoMode(600, 800), "SFML window");
+    window = new RenderWindow(sf::VideoMode(width, height), windowTitle);
 
 	cout << "Se ha creado un GameManager.\n";
 }

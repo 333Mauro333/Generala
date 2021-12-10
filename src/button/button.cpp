@@ -81,9 +81,12 @@ void Button::update(float deltaTime)
 }
 void Button::draw(RenderWindow* window)
 {
-	window->draw(rectangle);
-	window->draw(internalRectangle);
-	window->draw(text);
+	if (isActive())
+	{
+		window->draw(rectangle);
+		window->draw(internalRectangle);
+		window->draw(text);
+	}
 }
 
 void Button::setString(string name)

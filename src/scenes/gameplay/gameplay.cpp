@@ -14,8 +14,11 @@ Gameplay::Gameplay(RenderWindow* window) : Scene()
 	back.setFillColor(Color(static_cast<sf::Uint8>(256), static_cast < sf::Uint8>(128), static_cast < sf::Uint8>(100)));
 	back.setSize({ static_cast<float>(window->getSize().x), static_cast<float>(window->getSize().y) });
 	count = 3;
+	end = false;
 
 	buttonThrow = new Button(window->getSize().x / 2.0f, window->getSize().y / 1.1f, window->getSize().x / 3.0f, window->getSize().y / 10.0f, Color::Blue, "Tirar (" + std::to_string(count) + ")");
+	buttonToMenu = new Button(window->getSize().x / 2.0f, window->getSize().y / 1.5f, window->getSize().x / 3.0f, window->getSize().y / 10.0f, Color::Blue, "VOLVER AL MENÚ");
+	buttonToMenu->setActive(false);
 
 	dices[0] = new Dice({ window->getSize().x / 6.0f * 1.0f, window->getSize().y / 1.25f });
 	dices[1] = new Dice({ window->getSize().x / 6.0f * 2.0f, window->getSize().y / 1.25f });
@@ -65,7 +68,11 @@ void Gameplay::update(float deltaTime)
 }
 void Gameplay::draw()
 {
+	if (!end)
+	{ 
+	
 	window->draw(back);
+	}
 	for (int i = 0; i < 5; i++)
 	{
 		dices[i]->draw(window);
@@ -81,6 +88,14 @@ void Gameplay::draw()
 			showMessagePoints(static_cast<CATEGORY>(i));
 		}
 	}
+
+	if (end)
+	{
+
+		window->draw(back);
+	}
+
+	buttonToMenu->draw(window);
 }
 void Gameplay::destroy()
 {
@@ -130,7 +145,7 @@ void Gameplay::checkClicks(int x, int y)
 		}
 	}
 
-	bool end = true;
+	end = true;
 
 	for (int i = 0; i < Annotations::getPosterArraySize() - 1; i++)
 	{
@@ -142,7 +157,12 @@ void Gameplay::checkClicks(int x, int y)
 
 	if (end)
 	{
-		SceneManager::chargeNewScene(new MainMenu(window));
+		buttonToMenu->setActive(true);
+
+		if (buttonToMenu->isInside(x, y))
+		{
+			SceneManager::chargeNewScene(new MainMenu(window));
+		}
 	}
 }
 void Gameplay::checkMouseCollision(int x, int y)
