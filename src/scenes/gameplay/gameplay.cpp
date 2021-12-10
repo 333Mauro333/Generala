@@ -2,6 +2,9 @@
 
 #include <iostream>
 
+#include "scene_manager/scene_manager.h"
+#include "scenes/main_menu/main_menu.h"
+
 using std::cout;
 
 
@@ -125,6 +128,21 @@ void Gameplay::checkClicks(int x, int y)
 				count = 3;
 			}
 		}
+	}
+
+	bool end = true;
+
+	for (int i = 0; i < Annotations::getPosterArraySize() - 1; i++)
+	{
+		if (!annotations->getPoster(i)->isInhabilited() && i != 0)
+		{
+			end = false;
+		}
+	}
+
+	if (end)
+	{
+		SceneManager::chargeNewScene(new MainMenu(window));
 	}
 }
 void Gameplay::checkMouseCollision(int x, int y)

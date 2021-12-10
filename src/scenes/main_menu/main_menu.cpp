@@ -15,11 +15,9 @@ MainMenu::MainMenu(RenderWindow* window) : Scene()
 	back.setSize({ static_cast<float>(window->getSize().x), static_cast<float>(window->getSize().y) });
 	back.setFillColor(Color::Color(141, 73, 37));
 
-	button[0] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 2.3f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "JUGAR");
-	button[1] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 3.1f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "OPCIONES");
-	button[2] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 3.9f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "AYUDA");
-	button[3] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 4.7f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "CREDITOS");
-	button[4] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 5.5f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "SALIR");
+	button[0] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 2.7f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "JUGAR");
+	button[1] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 3.9f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "AYUDA");
+	button[2] = new Button(window->getSize().x / 2.0f, window->getSize().y / 6 * 5.1f - hButtons / 2.0f, wButtons, hButtons, Color::Yellow, "SALIR");
 
 	font.loadFromFile("res/fonts/over_the_rainbow.ttf");
 	gameTitle.setFont(font);
@@ -28,6 +26,13 @@ MainMenu::MainMenu(RenderWindow* window) : Scene()
 	gameTitle.setString("GENERALA");
 	gameTitle.setOrigin(gameTitle.getGlobalBounds().width / 2.0f, gameTitle.getGlobalBounds().height / 2.0f);
 	gameTitle.setPosition(window->getSize().x / 2.0f, window->getSize().y / 7.0f);
+
+	font2.loadFromFile("res/fonts/segoepr.ttf");
+	credits.setFont(font2);
+	credits.setCharacterSize(20);
+	credits.setFillColor(Color::White);
+	credits.setString("Programado por Mauro Torres con la librería SFML.");
+	credits.setPosition(30.0f, window->getSize().y / 1.05f);
 
 	cout << "Se ha creado una pantalla de menu principal.\n";
 }
@@ -48,16 +53,23 @@ void MainMenu::draw()
 {
 	window->draw(back);
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 3; i++)
 	{
-		button[i]->draw(window);
+		if (button[i] != NULL)
+		{
+			button[i]->draw(window);
+		}
 	}
 
 	window->draw(gameTitle);
+	window->draw(credits);
 }
 void MainMenu::destroy()
 {
-
+	for (int i = 0; i < 3; i++)
+	{
+		delete button[i];
+	}
 }
 
 void MainMenu::checkClicks(int x, int y)

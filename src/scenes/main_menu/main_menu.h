@@ -14,11 +14,13 @@ class MainMenu : public Scene
 private:
 	RenderWindow* window;
 	
-	Button* button[5];
+	Button* button[3];
 
 	RectangleShape back;
 	Font font;
+	Font font2;
 	Text gameTitle;
+	Text credits;
 
 	const float wButtons = 200;
 	const float hButtons = 100;

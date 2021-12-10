@@ -98,6 +98,7 @@ void Annotations::updateScore(int ind, CATEGORY category, Dice* dice[])
 	points[ind].text.setString(points[ind].str_points);
 	points[ind].text.setPosition(points[ind].position.x, points[ind].position.y);
 
+	points[11].points = 0;
 	for (int i = 0; i < 11; i++)
 	{
 		points[11].points += points[i].points;
